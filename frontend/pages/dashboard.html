@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gym Manager</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>GYM MANAGER</h1>
+                <p>Sistema de Gerenciamento de Academia</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="alunos.html">Alunos</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <span id="nomeUsuario">Administrador</span>
+                <button onclick="logout()" class="btn btn-secondary">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="dashboard">
+                <h2>Dashboard</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <span>total</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalAlunos">0</h3>
+                            <p>Total de Alunos</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <span>ativo</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="alunosAtivos">0</h3>
+                            <p>Alunos Ativos</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <span>inativo</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="alunosInativos">0</h3>
+                            <p>Alunos Inativos</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <span>atrasado</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="alunosAtrasados">0</h3>
+                            <p>Alunos Atrasados</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-actions">
+                    <button onclick="window.location.href='alunos.html'" class="btn btn-primary">
+                        Gerenciar Alunos
+                    </button>
+                    <button onclick="abrirWhatsApp()" class="btn btn-whatsapp">
+                        Contato via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Gym Manager. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="../js/api.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

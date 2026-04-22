@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos - Gym Manager</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>GYM MANAGER</h1>
+                <p>Sistema de Gerenciamento de Academia</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="alunos.html" class="active">Alunos</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <span id="nomeUsuario">Administrador</span>
+                <button onclick="logout()" class="btn btn-secondary">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="alunos-page">
+                <div class="page-header">
+                    <h2>Gerenciamento de Alunos</h2>
+                    <button onclick="abrirModalCadastro()" class="btn btn-primary">
+                        Novo Aluno
+                    </button>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" id="buscaInput" placeholder="Buscar aluno por nome ou email...">
+                    <button onclick="buscarAlunos()" class="btn btn-secondary">Buscar</button>
+                </div>
+
+                <div class="alunos-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>Plano</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="alunosTableBody">
+                            <tr>
+                                <td colspan="7">Carregando...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Gym Manager. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Modal de Cadastro/Edição -->
+    <div id="modalAluno" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Novo Aluno</h3>
+                <button onclick="fecharModal()" class="modal-close">&times;</button>
+            </div>
+            <form id="alunoForm">
+                <input type="hidden" id="alunoId">
+                
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="plano">Plano:</label>
+                    <select id="plano" name="plano" required style="color: #ffffff !important; background: rgba(255, 255, 255, 0.1) !important;">
+                        <option value="" style="color: #ffffff !important;">Selecione...</option>
+                        <option value="Básico" style="color: #ffffff !important; background: #1a1a2e !important;">Básico</option>
+                        <option value="Intermediário" style="color: #ffffff !important; background: #1a1a2e !important;">Intermediário</option>
+                        <option value="Avançado" style="color: #ffffff !important; background: #1a1a2e !important;">Avançado</option>
+                        <option value="Premium" style="color: #ffffff !important; background: #1a1a2e !important;">Premium</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status" required style="color: #ffffff !important; background: rgba(255, 255, 255, 0.1) !important;">
+                        <option value="ativo" style="color: #ffffff !important; background: #1a1a2e !important;">Ativo</option>
+                        <option value="inativo" style="color: #ffffff !important; background: #1a1a2e !important;">Inativo</option>
+                        <option value="atrasado" style="color: #ffffff !important; background: #1a1a2e !important;">Atrasado</option>
+                    </select>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" onclick="fecharModal()" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="../js/api.js"></script>
+    <script src="../js/alunos.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Manager - Sistema de Academia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER FULL WIDTH -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>GYM MANAGER</h1>
+                <p>Sistema de Gerenciamento de Academia</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- CONTEÚDO CENTRALIZADO -->
+        <div class="container">
+
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Transforme Sua Academia</h1>
+                    <h2>Gestão Inteligente para Resultados Extraordinários</h2>
+                    <p>O sistema completo para gerenciar alunos, planos e pagamento com eficiência e estilo.</p>
+                    
+                    <div class="hero-actions">
+                        <button onclick="window.location.href='pages/login.html'" class="btn btn-primary">
+                            Acessar Sistema
+                        </button>
+                        <button onclick="scrollToSection('demo')" class="btn btn-secondary">
+                            Ver Demonstração
+                        </button>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <div class="feature">
+                            <div class="feature-icon">📊</div>
+                            <h3>Dashboard Moderno</h3>
+                            <p>Estatísticas em tempo real para tomada de decisões</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">👥</div>
+                            <h3>Gestão de Alunos</h3>
+                            <p>Controle completo do cadastro e status dos alunos</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">💳</div>
+                            <h3>Controle Financeiro</h3>
+                            <p>Monitoramento de pagamentos e planos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="card-title">Gym Manager</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-row">
+                                <div class="stat-item">
+                                    <div class="stat-number">247</div>
+                                    <div class="stat-label">Alunos Ativos</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">12</div>
+                                    <div class="stat-label">Novos Hoje</div>
+                                </div>
+                            </div>
+                            <div class="chart-placeholder">
+                                <div class="chart-bar" style="height: 60%"></div>
+                                <div class="chart-bar" style="height: 80%"></div>
+                                <div class="chart-bar" style="height: 45%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="demo" class="demo-section">
+                <h2>Recursos Principais</h2>
+                <div class="demo-grid">
+                    <div class="demo-card">
+                        <div class="demo-icon">🔐</div>
+                        <h3>Login Seguro</h3>
+                        <p>Acesso protegido com autenticação simples e eficiente</p>
+                    </div>
+                    <div class="demo-card">
+                        <div class="demo-icon">📈</div>
+                        <h3>Análises em Tempo Real</h3>
+                        <p>Dashboard com métricas atualizadas instantaneamente</p>
+                    </div>
+                    <div class="demo-card">
+                        <div class="demo-icon">✏️</div>
+                        <h3>CRUD Completo</h3>
+                        <p>Crie, edite e gerencie alunos com facilidade</p>
+                    </div>
+                    <div class="demo-card">
+                        <div class="demo-icon">🔍</div>
+                        <h3>Busca Inteligente</h3>
+                        <p>Encontre alunos rapidamente por nome ou email</p>
+                    </div>
+                    <div class="demo-card">
+                        <div class="demo-icon">💬</div>
+                        <h3>Integração WhatsApp</h3>
+                        <p>Conecte-se com alunos diretamente pelo sistema</p>
+                    </div>
+                    <div class="demo-card">
+                        <div class="demo-icon">📱</div>
+                        <h3>Design Responsivo</h3>
+                        <p>Acesse o sistema de qualquer dispositivo</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER FULL WIDTH -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Gym Manager. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

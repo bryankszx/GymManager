@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nome": "Bryan Martins",
+    "email": "bryanmzop@gmail.com",
+    "telefone": "(11) 97508-1010",
+    "plano": "Premium",
+    "status": "ativo",
+    "usuarioId": "admin",
+    "dataCadastro": "2026-04-22T19:07:41.824Z"
+  },
+  {
+    "id": 2,
+    "nome": "Danilo Catro",
+    "email": "castrolindo@gmail.com",
+    "telefone": "(11) 4002-8922",
+    "plano": "Intermediário",
+    "status": "inativo",
+    "usuarioId": "admin",
+    "dataCadastro": "2026-04-22T19:08:23.294Z"
+  }
+]
